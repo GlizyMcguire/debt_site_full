@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "host": "npx http-server --cors -a 0.0.0.0"
+  }
+}

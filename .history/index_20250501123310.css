@@ -1,0 +1,67 @@
+/* =========================
+   Base Styles
+   ========================= */
+body {
+  font-family: "Segoe UI";
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+.btn-primary {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+}
+
+/* =========================
+   Navigation
+   ========================= */
+/* Add navigation-related styles here */
+
+/* =========================
+   Hero Section
+   ========================= */
+/* Add hero section-related styles here */
+
+/* =========================
+   About Section
+   ========================= */
+/* Add about section-related styles here */
+
+/* =========================
+   Buy Section
+   ========================= */
+/* Add buy section-related styles here */
+
+/* =========================
+   Community Section
+   ========================= */
+/* Add community section-related styles here */
+
+/* =========================
+   Footer
+   ========================= */
+/* Add footer-related styles here */
+
+/* =========================
+   Utility Classes
+   ========================= */
+/* Add utility/helper classes here */
+
+/* =========================
+   Custom Classes
+   ========================= */
+/* ...add all other classes and custom styles used in your HTML... */

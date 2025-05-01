@@ -1,0 +1,39 @@
+/* Place your custom CSS here. Example: */
+
+body {
+  /* Example base styles */
+  font-family: "Segoe UI";
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+/* Example for a button */
+.btn-primary {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+}
+
+/* Hero section video sizing */
+.hero-video {
+  width: 80vw;         /* or a fixed value like 600px */
+  max-width: 800px;
+  height: 40vh;        /* or a fixed value like 300px */
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1rem; /* optional: rounded corners */
+}
+
+/* ...add all other classes and custom styles used in your HTML... */

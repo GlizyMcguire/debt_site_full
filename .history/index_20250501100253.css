@@ -1,0 +1,34 @@
+/* Global font reset and smoothing */
+html, body {
+  font-family: 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Inherit font for all elements */
+*, *::before, *::after {
+  font-family: inherit !important;
+  box-sizing: border-box;
+}
+
+/* Example for a button */
+.btn-primary {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+}
+
+/* ...add all other classes and custom styles used in your HTML... */

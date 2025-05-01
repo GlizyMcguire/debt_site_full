@@ -1,0 +1,250 @@
+/* =========================
+   Base Styles
+   ========================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+.btn-primary {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+}
+
+/* =========================
+   Navigation
+   ========================= */
+/* Add navigation-related styles here */
+
+/* =========================
+   Hero Section
+   ========================= */
+/* Add hero section-related styles here */
+
+/* =========================
+   About Section
+   ========================= */
+#about {
+  background: var(--accent-color);
+  padding: 4rem 0;
+}
+
+#about .container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about .grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+#about .feature-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#about .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Buy Section
+   ========================= */
+/* Add buy section-related styles here */
+
+/* =========================
+   Community Section
+   ========================= */
+#community {
+  background: white;
+  padding: 4rem 0;
+}
+
+#community .container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#community .social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#community .social-link {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#community .social-link:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+}
+
+/* =========================
+   Footer
+   ========================= */
+/* Add footer-related styles here */
+
+/* =========================
+   Utility Classes
+   ========================= */
+/* Add utility/helper classes here */
+
+/* =========================
+   Custom Classes
+   ========================= */
+/* ...add all other classes and custom styles used in your HTML... */
+
+/* =========================
+   Performance Optimizations
+   ========================= */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}
+
+.hero-bg,
+.hero-section,
+video {
+  will-change: opacity, transform;
+  /* Prevent mobile scroll lag */
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================
+   Common Text Styles
+   ========================= */
+.section {
+  color: #000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.section h2 {
+  color: #000;
+  font-weight: 700;
+}
+
+.section h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+.section p {
+  color: #4B5563;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* Update About Section */
+#about {
+  background: var(--accent-color);
+  padding: 4rem 0;
+}
+
+#about h2,
+#about h3,
+#about p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#about .feature-card {
+  background: white;
+  color: #000;
+}
+
+/* Update Community Section */
+#community {
+  background: white;
+  padding: 4rem 0;
+}
+
+#community h2,
+#community h3,
+#community p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.social-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Update Buy Section */
+#buy {
+  color: #000;
+}
+
+#buy h2,
+#buy h3,
+#buy p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* =========================
+   Responsive Improvements
+   ========================= */
+@media (max-width: 600px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.2em;
+  }
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #about .grid-cols-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  #community .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section h2 {
+    font-size: 1.875rem;
+  }
+  
+  .section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section p {
+    font-size: 1rem;
+  }
+}

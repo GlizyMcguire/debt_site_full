@@ -1,0 +1,731 @@
+
+/* =========================
+   Base Styles
+   ========================= */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: var(--sand-light);
+  color: #000;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+.btn-primary {
+  background: var(--button-gradient);
+  color: var(--button-text);
+  box-shadow: 0 2px 4px var(--button-shadow);
+  padding: 0.3rem 1rem;  /* Reduced vertical padding */
+  height: 32px;  /* Fixed smaller height */
+  font-size: 0.875rem;
+  min-height: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  /* Subtle text shadow for readability */
+}
+
+.btn-primary:hover {
+  background: var(--button-hover-gradient);
+  box-shadow: 0 4px 8px var(--button-shadow);
+}
+
+/* Ensure consistent button heights in all sections */
+.btn-primary,
+.border-2,
+nav .btn-primary,
+.hero-section .btn-primary,
+.hero-section .border-2,
+#buy .btn-primary {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+/* Add navigation-related styles here */
+
+/* Navigation Bar Background */
+nav {
+  background: rgba(0, 0, 0, 0.3); /* More transparent background */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Darker when scrolled */
+}
+
+/* Navigation Button Fix */
+nav .btn-primary {
+  padding: 0.3rem 0.875rem;
+  height: 32px;  /* Fixed smaller height */
+  min-height: unset;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+nav .btn-primary img {
+  width: 18px;  /* Smaller logo */
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+/* Contract Address Container */
+nav .bg-black\/30 {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust nav container spacing */
+.container-custom.py-4 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+nav .space-x-2 > * + * {
+  margin-left: 0.375rem;  /* Tighter spacing between elements */
+}
+
+/* Navigation Menu Items Background */
+nav .text-gray-100 {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+nav .text-gray-100:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Adjust spacing between menu items */
+nav .space-x-8 > * + * {
+  margin-left: 0.75rem;
+}
+
+/* Ensure menu items are aligned */
+nav .hidden.md\:flex.space-x-8 {
+  align-items: center;
+  height: 100%;
+}
+
+/* $RETIREMENT Text Gradient */
+nav .font-heading.text-transparent {
+  background: var(--button-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+/* Add hero section-related styles here */
+
+/* Hero Section Button Fixes */
+.hero-section .btn-primary,
+.hero-section .border-2 {
+  padding: 0.3rem 0.875rem;
+  height: 32px;  /* Fixed smaller height */
+  min-height: unset;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;  /* Tighter spacing between icon and text */
+  min-width: 140px;  /* Minimum width to maintain consistency */
+}
+
+/* Hero Buy Button Specific */
+.hero-section .btn-primary img {
+  width: 16px;  /* Smaller logo */
+  height: 16px;
+}
+
+/* Learn More Button */
+.hero-section .border-2 {
+  border-width: 1px;  /* Thinner border */
+  padding: 0.3rem 1.25rem;  /* Slightly wider padding for text-only button */
+  font-weight: 500;  /* Less bold */
+  min-width: 120px;  /* Minimum width */
+  border-color: #E6873C;
+  color: #E6873C;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-section .border-2:hover {
+  background: rgba(230, 135, 60, 0.1);
+}
+
+/* Button Container Spacing */
+.hero-section .flex.flex-col.sm\:flex-row.gap-4 {
+  gap: 0.625rem;  /* Reduced gap between buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-section .btn-primary,
+  .hero-section .border-2 {
+    height: 2rem;  /* Even smaller on mobile */
+    font-size: 0.875rem;
+  }
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  position: relative;
+  z-index: 10;
+}
+
+.hero-section h1 {
+  font-size: 2rem; /* Smaller font size for mobile */
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1rem; /* Adjust text size for readability */
+  margin-bottom: 1.5rem;
+}
+
+.hero-section .btn-primary,
+.hero-section .border-2 {
+  width: 100%; /* Full-width buttons on mobile */
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.hero-section .flex {
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 1rem; /* Add spacing between buttons */
+}
+
+.hero-section .mt-8 {
+  margin-top: 2rem; /* Add spacing for stats section */
+}
+
+.hero-section .text-center {
+  margin-bottom: 1rem; /* Adjust spacing for stats */
+}
+
+.hero-section .h-12 {
+  height: 1px; /* Reduce divider height */
+}
+
+.hero-section + .bg-white {
+  position: relative;
+  z-index: 20;
+  background: white;
+}
+
+/* =========================
+   About Section
+   ========================= */
+#about {
+  background: linear-gradient(to bottom, var(--sand-light), var(--sand-medium));
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+  background-color: var(--sand-light);
+}
+
+#about .container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#about .grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;  /* Reduced gap between cards */
+}
+
+#about .feature-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#about .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#about .feature-card svg {
+  color: #ff6a00;
+}
+
+#about .feature-card .w-14 {
+  width: 2.5rem;  /* Smaller icon container */
+  height: 2.5rem;  /* Smaller icon container */
+  margin-bottom: 0.5rem;  /* Reduced margin */
+}
+
+#about .feature-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#about .feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #6B7280;
+}
+
+/* Remove gradient container styles */
+.bg-gradient-primary,
+.w-14.h-14.bg-gradient-primary {
+  display: none;
+}
+
+/* =========================
+   Buy Section
+   ========================= */
+#buy {
+  color: #000;
+  position: relative;
+  z-index: 1;
+  background-color: var(--sand-light);
+}
+
+#buy h2,
+#buy h3,
+#buy p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Update Buy Section Container */
+.bg-white.bg-opacity-90.backdrop-filter.backdrop-blur-sm.rounded-xl.p-8.shadow-sm.h-full {
+  padding: 1.5rem;  /* Reduced padding from 2rem (p-8) to 1.5rem */
+  max-width: 800px; /* Control maximum width */
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Make Buy button and contract box more compact */
+.bg-accent-dark.p-4.rounded-lg.mb-6 {
+  padding: 0.75rem;  /* Reduced padding */
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+/* Update the heading size in buy section */
+#buy h3.text-2xl {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Make the buy buttons more compact */
+#buy .grid.grid-cols-1.sm\:grid-cols-2.gap-4.mb-4 {
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#buy .btn-primary {
+  padding: 0.3rem 0.875rem;
+  height: 32px;  /* Fixed smaller height */
+  min-height: unset;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust copy button size */
+#buy button[aria-label="Copy contract address"] {
+  padding: 0.375rem;
+  transform: scale(0.9);
+}
+
+/* =========================
+   Community Section
+   ========================= */
+#community {
+  background: linear-gradient(to bottom, var(--sand-medium), var(--sand-dark));
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+  background-color: var(--sand-light);
+}
+
+#community .container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#community .social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#community .social-link {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.2s;
+  background: var(--button-gradient);
+  color: white !important;
+  box-shadow: 0 2px 4px var(--button-shadow);
+}
+
+#community .social-link:hover {
+  transform: translateY(-5px);
+  opacity: 0.9;
+  background: var(--button-hover-gradient);
+  box-shadow: 0 4px 8px var(--button-shadow);
+}
+
+/* =========================
+   Footer
+   ========================= */
+/* Add footer-related styles here */
+
+/* =========================
+   Utility Classes
+   ========================= */
+/* Add utility/helper classes here */
+
+/* =========================
+   Custom Classes
+   ========================= */
+/* ...add all other classes and custom styles used in your HTML... */
+
+/* =========================
+   Performance Optimizations
+   ========================= */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}
+
+.hero-bg,
+.hero-section,
+video {
+  will-change: opacity, transform;
+  /* Prevent mobile scroll lag */
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* =========================
+   Common Text Styles
+   ========================= */
+.section {
+  color: #000;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--sand-light);
+  position: relative;
+}
+
+.section h2 {
+  color: #000;
+  font-weight: 700;
+}
+
+.section h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+.section p {
+  color: #4B5563;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* Update About Section */
+#about {
+  background: linear-gradient(to bottom, var(--sand-light), var(--sand-medium));
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+#about h2,
+#about h3,
+#about p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#about .feature-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+#about .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#about .feature-card svg {
+  color: #ff6a00;
+}
+
+/* Update Community Section */
+#community {
+  background: linear-gradient(to bottom, var(--sand-medium), var(--sand-dark));
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+#community h2,
+#community h3,
+#community p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#community .social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#community .social-link {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.2s;
+  background: var(--button-gradient);
+  color: white !important;
+  box-shadow: 0 2px 4px var(--button-shadow);
+}
+
+.social-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Update Buy Section */
+#buy {
+  color: #000;
+}
+
+#buy h2,
+#buy h3,
+#buy p {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Chart Container Fix */
+.chart-container {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  backdrop-filter: blur(10px);
+}
+
+/* Text Visibility Fixes */
+.section h2,
+.section h3,
+.section p {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #000;
+}
+
+.section p {
+  color: #4B5563;
+}
+
+/* Fix for animation transforms */
+[style*="transform:"] {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* =========================
+   Responsive Improvements
+   ========================= */
+@media (max-width: 600px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+  h1, h2, h3 {
+    font-size: 1.2em;
+  }
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #about .grid-cols-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  #community .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section h2 {
+    font-size: 1.875rem;
+  }
+  
+  .section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section h1 {
+    font-size: 3rem; /* Larger font size for tablets */
+  }
+
+  .hero-section .btn-primary,
+  .hero-section .border-2 {
+    width: auto; /* Inline buttons for larger screens */
+  }
+
+  .slideshow-section .flex {
+    flex-direction: row; /* Horizontal navigation for larger screens */
+  }
+
+  .slideshow-section .w-3 {
+    width: 1rem; /* Larger dots for tablets */
+    height: 1rem;
+  }
+}
+
+/* =========================
+   Slideshow Styles
+========================= */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .slideshow-image.active {
+    opacity: 1;
+    z-index: 1;
+  }  
+
+/* CSS Variables */
+:root {
+  --accent-color: #f8f3ec;  /* Even lighter sand color */
+  --primary-gradient: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  --sand-light: #f9f4ed;    /* Very light sand (more white) */
+  --sand-medium: #f3ece2;   /* Lighter medium sand */
+  --sand-dark: #ece4d8;     /* Lighter dark sand */
+  --button-gradient: linear-gradient(90deg, #E6873C 0%, #D35400 100%);  /* Warm sunset gradient */
+  --button-hover-gradient: linear-gradient(90deg, #D35400 0%, #E6873C 100%);  /* Reversed sunset */
+  --button-text: #FFFFFF;  /* White text for contrast */
+  --button-shadow: rgba(214, 84, 0, 0.15);  /* Lighter shadow */
+}
+
+/* =========================
+   Slideshow Animation Adjustments
+   ========================= */
+.slideshow-section > div > div.absolute {
+  animation: fade 32s infinite steps(8);
+}
+.slideshow-section > div > div.absolute:nth-child(1) { animation-delay: 0s; }
+.slideshow-section > div > div.absolute:nth-child(2) { animation-delay: 4s; }
+.slideshow-section > div > div.absolute:nth-child(3) { animation-delay: 8s; }
+.slideshow-section > div > div.absolute:nth-child(4) { animation-delay: 12s; }
+.slideshow-section > div > div.absolute:nth-child(5) { animation-delay: 16s; }
+.slideshow-section > div > div.absolute:nth-child(6) { animation-delay: 20s; }
+.slideshow-section > div > div.absolute:nth-child(7) { animation-delay: 24s; }
+.slideshow-section > div > div.absolute:nth-child(8) { animation-delay: 28s; }
+
+@keyframes fade {
+  0%, 12.5% { opacity: 1; }
+  12.6%, 100% { opacity: 0; }
+}
+
+/* =========================
+   Slideshow Layout & Animation Fix
+   ========================= */
+/* Make the container a flex track */
+.slideshow-section > div > .flex.flex-col.h-full > .relative.w-full.flex-grow.overflow-hidden.cursor-pointer {
+  display: flex !important;
+  animation: slide 32s infinite;
+}
+
+/* Each slide occupies full width and is not positioned absolutely */
+.slideshow-section > div > .flex.flex-col.h-full > .relative.w-full.flex-grow.overflow-hidden.cursor-pointer > div {
+  position: static !important;
+  flex-shrink: 0;
+  width: 100%;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Disable the previous absolute stacking animation */
+.slideshow-section > div > div.absolute {
+  animation: none !important;
+}
+
+/* Define keyframes for 8 slides (4s per slide over 32s total) */
+@keyframes slide {
+  0%, 12.5%   { transform: translateX(0%); }
+  12.6%, 25%  { transform: translateX(-100%); }
+  25.1%, 37.5% { transform: translateX(-200%); }
+  37.6%, 50%  { transform: translateX(-300%); }
+  50.1%, 62.5% { transform: translateX(-400%); }
+  62.6%, 75%  { transform: translateX(-500%); }
+  75.1%, 87.5% { transform: translateX(-600%); }
+  87.6%, 100%  { transform: translateX(-700%); }
+}
+
