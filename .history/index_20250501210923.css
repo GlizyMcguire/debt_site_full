@@ -314,44 +314,6 @@ nav .font-heading.text-transparent {
   display: none;
 }
 
-/* Roadmap Section Styles */
-#about .roadmap-card {
-  background: rgba(255, 255, 255, 0.9) !important;
-  padding: 1.5rem !important;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-#about .roadmap-card .flex {
-  align-items: center;
-}
-
-#about .roadmap-card img {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  object-fit: contain;
-  display: block;
-}
-
-#about .roadmap-card h3 {
-  margin-left: 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-#about .roadmap-card p {
-  margin-top: 0.5rem;
-  color: #666;
-  line-height: 1.5;
-}
-
-/* Increase size of roadmap section */
-#about .bg-white.p-8.rounded-xl.shadow-sm {
-  padding: 2rem !important;
-  margin-bottom: 1.5rem;
-}
-
 /* =========================
    Buy Section
    ========================= */
@@ -774,5 +736,43 @@ video {
   62.6%, 75%  { transform: translateX(-500%); }
   75.1%, 87.5% { transform: translateX(-600%); }
   87.6%, 100%  { transform: translateX(-700%); }
+}
+
+/* Roadmap number icons */
+.roadmap-step {
+  background: linear-gradient(90deg, #E6873C 0%, #D35400 100%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.roadmap-step img {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 1 !important;
+  display: block !important;
+  object-fit: contain;
+}
+
+/* Fix any transform or opacity animations that might interfere */
+[style*="opacity:0"],
+[style*="transform:"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* HODL box styling */
+.max-w-lg {
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
