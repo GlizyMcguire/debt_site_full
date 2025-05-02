@@ -108,27 +108,32 @@
         Investing in the Exit Strategy
       </h1>
   
-      <!-- Live Counter -->
-      <section class="w-full bg-gradient-to-b from-black to-gray-900 py-6 px-4 sm:px-6 md:px-8 rounded-xl mb-6">
-        <div class="max-w-xl mx-auto text-center">
-          <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3">
-            Hours Worked Toward Unreachable Retirement
-          </h2>
-          <div class="bg-black/30 p-4 sm:p-6 rounded-lg backdrop-blur-sm shadow-md">
-            <p class="text-xs sm:text-sm text-gray-300 mb-2">
-              The system was never designed to let you stop working.
-            </p>
-            <div id="retirement-counter" class="text-xl sm:text-2xl md:text-3xl font-bold text-white font-mono animate-pulse">
-              8,204,112,387,009.42
-            </div>
-          </div>
-          <div class="mt-6">
-            <a href="#buy" class="inline-block w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-3 rounded-lg transition">
-              Stop the Count. Start $RETIREMENT
-            </a>
-          </div>
-        </div>
-      </section>
+      document.addEventListener("DOMContentLoaded", function () {
+        const counterEl = document.getElementById("retirement-counter");
+      
+        // Realistic US baseline: ~169.5 billion hours worked in 2023
+        const baseValue = 169500000000;
+      
+        // US-wide average: ~5361 hours added every second
+        const ratePerSecond = 5361;
+      
+        // Start from Jan 1, 2024 at midnight UTC
+        const startTimestamp = new Date('2024-01-01T00:00:00Z').getTime();
+      
+        function updateCounter() {
+          const now = Date.now();
+          const secondsElapsed = Math.floor((now - startTimestamp) / 1000);
+          const newValue = baseValue + (ratePerSecond * secondsElapsed);
+          counterEl.textContent = newValue.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+          requestAnimationFrame(updateCounter);
+        }
+      
+        updateCounter();
+      });
+      
   
       <!-- Tagline + Logo -->
 <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-6">
