@@ -1,5 +1,6 @@
 // Contract address constant
 const CONTRACT_ADDRESS = "CvSTs9Nvus98988888877hujkimkmkjmu8ikjiuj8"
+
 <script>
   function copyContractAddress() {
     const address = document.getElementById("contract-address").textContent.trim();
