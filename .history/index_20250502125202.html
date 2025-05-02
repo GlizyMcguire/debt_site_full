@@ -325,17 +325,17 @@
            $RETIREMENT Contract Address
           </span>
          </h3>
-         <div class="bg-accent-dark p-4 rounded-lg mb-6 flex items-center justify-between gap-3">
+         <div class="bg-accent-dark p-4 rounded-lg mb-6 overflow-auto relative">
           <code class="text-accent text-xs md:text-sm break-all font-mono">
            CvSTs9Nvus7DEmcHwr64JXpqYoGsjhUBSJ5LyVpqpump
           </code>
-          <button 
-            onclick="copyContractAddress()"
-            class="copy-btn flex items-center gap-2 bg-gradient-primary hover:opacity-90 text-white px-3 py-2 rounded-md transition-all whitespace-nowrap">
-            <svg fill="currentColor" height="16" stroke="currentColor" stroke-width="0" viewBox="0 0 448 512" width="16" xmlns="http://www.w3.org/2000/svg">
-              <path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"></path>
-            </svg>
-            <span class="copy-text">Copy</span>
+          <button aria-label="Copy contract address" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-primary hover:opacity-90 text-white p-2 rounded-md transition-all">
+           <svg fill="currentColor" height="16" stroke="currentColor" stroke-width="0" viewbox="0 0 448 512" width="16" xmlns="http://www.w3.org/2000/svg">
+            <path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z">
+            </path>
+           </svg>
+          </button>
+         </div>
           </button>
          </div>
          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
